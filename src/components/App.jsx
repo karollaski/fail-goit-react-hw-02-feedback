@@ -20,11 +20,9 @@ class App extends Component {
     Object.values(this.state).reduce((acc, state) => acc + state, 0);
 
   countPositiveFeedbackPercentage = () => {
-    {
-      const { good } = this.state;
-      const total = this.countTotalFeedback();
-      return Math.round((good / total) * 100) || 0;
-    }
+    const { good } = this.state;
+    const total = this.countTotalFeedback();
+    return Math.round((good / total) * 100) || 0;
   };
 
   render() {
